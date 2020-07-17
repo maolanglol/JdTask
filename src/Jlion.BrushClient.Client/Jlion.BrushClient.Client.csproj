@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Jlion.BrushClient.Client</RootNamespace>
+    <AssemblyName>Jlion.BrushClient.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>exe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.DynamicProxy2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Extras.DynamicProxy2.3.0.7\lib\net40\Autofac.Extras.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.4.0\lib\net40\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Windows.Shell.3.0.1.0\lib\net40\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Panuon.UI.Silver, Version=1.0.9.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Panuon.UI.Silver.1.0.9.4\lib\net40\Panuon.UI.Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=6.6.6.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PostSharp.Redist.6.6.6\lib\net35-client\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=2.4.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.4.0\lib\net40\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.4.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.4.0\lib\net40\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.2.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.4.0\lib\net40\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.0.9.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.4.0\lib\net40\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ConstDefintion\ConstDefintion.cs" />
+    <Compile Include="Enums\Enums.UIElementType.cs" />
+    <Compile Include="Enums\Enums.HotKey.cs" />
+    <Compile Include="Enums\Enums.IconEnumType.cs" />
+    <Compile Include="Enums\Enums.Internet.cs" />
+    <Compile Include="Enums\Enums.Control.cs" />
+    <Compile Include="Extensions\Extension.String.cs" />
+    <Compile Include="Extensions\Extension.Object.cs" />
+    <Compile Include="Extensions\Extension.Enums.cs" />
+    <Compile Include="Extensions\Extension.Control.cs" />
+    <Compile Include="Form\Browser.xaml.cs">
+      <DependentUpon>Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SuspensionMain.xaml.cs">
+      <DependentUpon>SuspensionMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\TimerKeyboardHelper.cs" />
+    <Compile Include="Helper\ServiceIniAsyncHelper.cs" />
+    <Compile Include="Interceptor\LoggerAttribute.cs" />
+    <Compile Include="Interceptor\LoggerInterceptor.cs" />
+    <Compile Include="LoginPersist\AccountCache.cs" />
+    <Compile Include="LoginPersist\StaticCache.cs" />
+    <Compile Include="Model\Request\Printer\BasePrinterContentRequest.cs" />
+    <Compile Include="Model\Request\CardOrderRequest.cs" />
+    <Compile Include="Model\Request\HotKeyProcRequest.cs" />
+    <Compile Include="Model\Request\NotifyDataRequest.cs" />
+    <Compile Include="Model\Request\OrderDataRequest.cs" />
+    <Compile Include="Model\Request\PagerBaseRequest.cs" />
+    <Compile Include="Model\Request\Printer\RefundContentRequest.cs" />
+    <Compile Include="Model\Request\ProductMarketingsRequest.cs" />
+    <Compile Include="Model\Response\HtmlElementUrl.cs" />
+    <Compile Include="Model\TimeActionModel.cs" />
+    <Compile Include="OnRender\BaseRender\OnPerDependencyRender.cs" />
+    <Compile Include="OnRender\BaseRender\OnSingleRender.cs" />
+    <Compile Include="OnRender\ControlRender\OnControlRender.cs" />
+    <Compile Include="OnRender\PageRender\OnAboutRender.cs" />
+    <Compile Include="OnRender\PageRender\OnAccountRender.cs" />
+    <Compile Include="OnRender\PageRender\OnBrowserRender.cs" />
+    <Compile Include="OnRender\PageRender\OnLoginRender.cs" />
+    <Compile Include="OnRender\PageRender\OnMainRender.cs" />
+    <Compile Include="OnRender\PageRender\OnProductRender.cs" />
+    <Compile Include="OnRender\PageRender\OnRedirectRender.cs" />
+    <Compile Include="OnRender\PageRender\OnSuspensionMainRender.cs" />
+    <Compile Include="OnRender\PageRender\OnTipRender.cs" />
+    <Compile Include="OnRender\PageRender\OnToolRender.cs" />
+    <Compile Include="OnRender\PageRender\OnAcccountRecordRender.cs" />
+    <Compile Include="OnRender\PageRender\OnWithdrawRender.cs" />
+    <Compile Include="OnRender\Timer\OnTimerRender.cs" />
+    <Compile Include="OnRender\Timer\TimeKeyStatics.cs" />
+    <Compile Include="Model\Request\Printer\ReceiveContentRequest.cs" />
+    <Compile Include="Page\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AccountRecord.xaml.cs">
+      <DependentUpon>AccountRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Product.xaml.cs">
+      <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\WithdrawRecord.xaml.cs">
+      <DependentUpon>WithdrawRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Form\Browser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Form\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Form\Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Form\SuspensionMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\AccountRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\Product.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\WithdrawRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\payment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Skin\SmallWindowSkin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\Skin\BigWindowSkin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\WindowsResizeBorderTemplete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="styles\main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Device.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\exe.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jlion.BrushClient.Application\Jlion.BrushClient.Application.csproj">
+      <Project>{04dcefe5-ff1a-4c12-a5d5-a8fc7f6e682a}</Project>
+      <Name>Jlion.BrushClient.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jlion.BrushClient.Framework\Jlion.BrushClient.Framework.csproj">
+      <Project>{2ead2e72-123c-47e0-9e0a-7c2394baf7a9}</Project>
+      <Name>Jlion.BrushClient.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jlion.BrushClient.UControl\Jlion.BrushClient.UControl.csproj">
+      <Project>{7260efdf-bb5f-437c-bf81-3d2107e2813f}</Project>
+      <Name>Jlion.BrushClient.UControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="exe.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\wifi-online%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\tradesummery%402x.png" />
+    <Resource Include="resource\image\tradelog%402x.png" />
+    <Resource Include="resource\image\workSettle%402x.png" />
+    <Resource Include="resource\image\about%402x.png" />
+    <Resource Include="resource\image\systemSettings%402x.png" />
+    <Resource Include="resource\image\tool%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-wxpay.png" />
+    <Resource Include="resource\image\icon-alipay.png" />
+    <Resource Include="resource\image\icon-bestpay.png" />
+    <Resource Include="resource\image\icon-bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-serial.png" />
+    <Resource Include="resource\image\icon-parallel%402x.png" />
+    <Resource Include="resource\image\icon-internet.png" />
+    <Resource Include="resource\image\icon-drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-read-ocr.png" />
+    <Resource Include="resource\image\icon-read-Serial.png" />
+    <Resource Include="resource\image\icon-read-windows.png" />
+    <Resource Include="resource\image\icon-read-virseriial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-offline%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-account-active.png" />
+    <Resource Include="resource\image\icon-account.png" />
+    <Resource Include="resource\image\icon-hotkey-active.png" />
+    <Resource Include="resource\image\icon-hotkey.png" />
+    <Resource Include="resource\image\icon-printer-active.png" />
+    <Resource Include="resource\image\icon-printer.png" />
+    <Resource Include="resource\image\icon-read-active.png" />
+    <Resource Include="resource\image\icon-read.png" />
+    <Resource Include="resource\image\icon-receipt-active.png" />
+    <Resource Include="resource\image\icon-receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\main-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-password.png" />
+    <Resource Include="resource\image\icon-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-timeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-menu-summary.png" />
+    <Resource Include="resource\image\icon-menu-trade.png" />
+    <Resource Include="resource\image\icon-menu-settle.png" />
+    <Resource Include="resource\image\icon-menu-about.png" />
+    <Resource Include="resource\image\icon-menu-logout.png" />
+    <Resource Include="resource\image\icon-menu-settings.png" />
+    <Resource Include="resource\image\icon-menu-tools.png" />
+    <Resource Include="resource\image\icon-menu-exit.png" />
+    <Resource Include="resource\image\icon-menu-refund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-menu-recipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-paying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-border-san.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\wifi-offline%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-check-fail.png" />
+    <Resource Include="resource\image\icon-client-check.png" />
+    <Resource Include="resource\image\icon-check-success.png" />
+    <Resource Include="resource\image\icon-internet-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-client-check-fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-internet-check-fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-upgrade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-close-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resource\image\icon-small-close.png" />
+    <Resource Include="resource\image\main.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\image\icon-share.png" />
+    <Content Include="Setup\normal\OutStart\WP.Device.Plugins.StartClient.exe" />
+    <Content Include="Setup\oem\OutStart\WP.Device.Plugins.StartClient.exe" />
+    <Resource Include="resource\image\exe-oem.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resource\image\icon-card.png" />
+    <Resource Include="resource\image\icon-memberpay.png" />
+    <Resource Include="resource\image\icon-menu-card.png" />
+    <Resource Include="resource\image\icon-unionpay.png" />
+    <Content Include="resource\sound\tts-receive.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-refund.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-0.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-1.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-2.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-3.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-4.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-5.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-6.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-7.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-8.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-9.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-decimal.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-hundred.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-ten.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-ten-thousand.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-thousand.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resource\sound\tts-yuan.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setup\complier_setup.iss" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OnRender\EventRender\" />
+    <Folder Include="OnRender\ToolRender\" />
+    <Folder Include="OnRender\UIRender\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <PropertyGroup>
+    <ReactorLocation>""</ReactorLocation>
+    <ReactorProject>"ReactorProject"</ReactorProject>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Output="" Reactor_Configuration="Debug" Reactor_Project="" Reactor_Commands="" Reactor_Deploy="0" Reactor_Enabled="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

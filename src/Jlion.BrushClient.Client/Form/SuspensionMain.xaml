@@ -1,0 +1,60 @@
+﻿<Window xmlns:UControl="clr-namespace:Jlion.BrushClient.UControl;assembly=Jlion.BrushClient.UControl"  x:Class="Jlion.BrushClient.Client.SuspensionMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jlion.BrushClient.Client"
+		xmlns:r="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="走地鸡" Height="110" Width="245" Topmost="True"  MouseDown="Window_MouseDown" WindowStartupLocation="Manual" LocationChanged="Window_LocationChanged"  Style="{StaticResource WindowsNoneTransparent}">
+	<!--<Grid>-->
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="15" Color="#858484" Direction="45" ShadowDepth="3"/>
+    </Window.Effect>
+    <Border BorderBrush="Gray"  BorderThickness="0" Margin="0,15,0,0">
+		<Grid>
+            <StackPanel Height="80" VerticalAlignment="Top">
+                <StackPanel Height="80" Margin="0,0,0,0" >
+                    <Border Name="mainMenus" VerticalAlignment="Center" HorizontalAlignment="Center" MouseLeftButtonDown="Window_MouseUpClick" Background="#ea986c" Width="80" Height="80" CornerRadius="40" BorderThickness="1" BorderBrush="#e0620d" Margin="0,0,0,0" Cursor="Hand" >
+                        <Border Margin="2" BorderBrush="#e0620d" BorderThickness="1" Background="#FFFFFF"  CornerRadius="40">
+                            <Label Content="￥0.00" Name="labPayMoney"  VerticalContentAlignment="Center" HorizontalAlignment="Center"  FontSize="15" FontStyle="Normal"  Foreground="#000000"></Label>
+                        </Border>
+                        <!--<Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                --><!--<ColumnDefinition></ColumnDefinition>-->
+                                <!--<ColumnDefinition></ColumnDefinition>--><!--
+                            </Grid.ColumnDefinitions>--><!--<ColumnDefinition></ColumnDefinition>-->
+                            <!--<Image Source="..\resource\image\main-logo.png" Name="OemLogo" Grid.Column="0" Width="40"></Image>--><!--
+                        </Grid-->
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+
+            <Border Name="childMenus" Background="#FFFFFF" CornerRadius="10" Visibility="Hidden" Width="225" Height="215" Margin="0,95,0,0" VerticalAlignment="Top" >
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="12"></RowDefinition>
+                        <RowDefinition Height="135"></RowDefinition>
+                        <RowDefinition Height="66"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!--<StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Image Source="..\resource\image\icon-border-san.png" VerticalAlignment="Top" Width="28" Height="12" Margin="100,-10,0,0"></Image>
+                    </StackPanel>-->
+                    <WrapPanel Orientation="Horizontal" Grid.Row="1">
+                        <UControl:ButtonEx Orientation="Vertical" Width="75" Height="67" Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-card.png" Name="BtnAccount" Click="BtnAccount_Click" ButtonType="IconText" Foreground="#000000"  Content="我的账户"/>
+                        <UControl:ButtonEx Orientation="Vertical" Width="75"  Height="67" Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-summary.png" Name="BtnWithdraw" Click="BtnWithdraw_Click" MouseOverBackground="#514D4D" Foreground="#000000" MouseOverForeground="#FFFFFF" ButtonType="IconText" Content="提现记录"/>
+                        <UControl:ButtonEx Orientation="Vertical" Width="75"  Height="67" Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-trade.png" Name="BtnAccountRecord" Click="BtnAccountRecord_Click" MouseOverBackground="#514D4D" MouseOverForeground="#FFFFFF" ButtonType="IconText" Foreground="#000000" Content="资金流水"/>
+
+                        <UControl:ButtonEx Orientation="Vertical"  Width="75"  Height="67"  Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-about.png" Name="BtnAbount" Click="BtnAbount_Click" MouseOverBackground="#514D4D" MouseOverForeground="#FFFFFF" ButtonType="IconText" Foreground="#000000" Content="关于我们"/>
+                        <UControl:ButtonEx Orientation="Vertical"  Width="75"  Height="67"  Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-logout.png" Name="BtnLogout" Click="BtnLogout_Click"  MouseOverBackground="#514D4D" MouseOverForeground="#FFFFFF" ButtonType="IconText" Foreground="#000000" Content="注销"/>
+                        <UControl:ButtonEx Orientation="Vertical"  Width="75"  Height="67"  Style="{StaticResource FloatMenuButtonEx}" Icon="..\resource\image\icon-menu-exit.png" Name="BtnExit" Click="BtnExit_Click" MouseOverBackground="#514D4D" MouseOverForeground="#FFFFFF" ButtonType="IconText" Foreground="#000000" Content="退出"/>
+                    </WrapPanel>
+                    <StackPanel Orientation="Horizontal" Height="67" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5">
+                        <UControl:ButtonEx Width="136" Height="30" CornerRadius="10" IconMargin="0,0,10,0" Icon="..\resource\image\stop.png" Name="BtnStart" Click="BtnStart_Click"  ButtonType="IconText" Foreground="#FFFFFF" MouseOverBackground="#514D4d" MouseOverForeground="#FFFFFF" Content="启动"  Background="#1296db"/>
+                    </StackPanel>
+                </Grid>
+			</Border>
+		</Grid>
+	</Border>
+</Window>

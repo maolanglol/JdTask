@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Jlion.BrushClient.Client.styles">
+
+	<Style TargetType="DatePickerTextBox">
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<TextBox Text="{Binding Path=SelectedDate, StringFormat='yyyy/MM/dd HH:mm:ss', RelativeSource={RelativeSource AncestorType=DatePicker}}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

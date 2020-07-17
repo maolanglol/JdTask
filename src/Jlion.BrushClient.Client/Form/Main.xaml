@@ -1,0 +1,127 @@
+﻿<Window x:Class="Jlion.BrushClient.Client.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:UControl="clr-namespace:Jlion.BrushClient.UControl;assembly=Jlion.BrushClient.UControl"
+        mc:Ignorable="d"
+        Title="走地鸡" BorderThickness="15" WindowStartupLocation="CenterScreen" Topmost="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Style="{StaticResource SkinWindowsNoneTransparent}">
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="PrintCommand" Text="NumPad1"/>
+            <RoutedUICommand x:Key="SettledCommand" Text="NumPad2"/>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <!--<Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+NumPad1" Command="{StaticResource PrintCommand}"></KeyBinding>
+        <KeyBinding Gesture="Ctrl+NumPad2" Command="{StaticResource SettledCommand}"></KeyBinding>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource PrintCommand}" Executed="BtnPrinter_Executed" CanExecute="CommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="{StaticResource SettledCommand}" Executed="BtnWorkSettle_Executed" CanExecute="CommandBinding_CanExecute_1"></CommandBinding>
+    </Window.CommandBindings>-->
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="15" Color="#858484" Direction="45" ShadowDepth="3"/>
+    </Window.Effect>
+    <Grid Name="BodyPanel">
+        <StackPanel >
+            <Border  BorderBrush="#E6E6EE" BorderThickness="0">
+                <Grid>
+                    <DockPanel HorizontalAlignment="Left"  LastChildFill="False" Style="{StaticResource SkinMainDockerPanel}">
+                        <!--顶部区域-->
+                        <Border Height="40" DockPanel.Dock="Top" Background="#666362" CornerRadius="10,10,0,0">
+                            <Grid>
+                                <DockPanel HorizontalAlignment="Left" Width="200">
+                                    <Image Source="..\resource\image\main-logo.png" Name="OemLogo" Width="40" HorizontalAlignment="Left" Margin="10,0,0,0"></Image>
+                                    <Label Content="走地鸡" Name="OemName" Foreground="White"  VerticalContentAlignment="Center" FontSize="12"></Label>
+                                </DockPanel>
+                                <DockPanel HorizontalAlignment="Right" Width="120">
+                                    <StackPanel Orientation="Horizontal">
+                                        <!--<UControl:ButtonEx Width="100" Margin="0,0,0,0" IconMargin="0,3,5,0" Height="25" Foreground="#E5E5E5" BorderThickness="0" IconSize="16" BorderBrush="#cccccc"  Icon="..\resource\image\wifi-online@2x.png"
+										   ButtonType="IconText" Name="btnInternet" Content="网络畅通">
+                                        </UControl:ButtonEx>-->
+                                        <StackPanel Orientation="Horizontal" Width="80" MouseLeftButtonDown="Image_MouseLeftButtonDown">
+                                            <!--<Image Source="..\resource\image\exe.ico" Name="ImgCashAvator" Width="20" Height="20"  Clip="{StaticResource ResourceKey=ClipGeometry}"></Image>-->
+                                            <Label Foreground="#E5E5E5" VerticalContentAlignment="Center" Name="labStoreName" Width="50">走地鸡</Label>
+                                            <Image Source="..\resource\image\icon-tree.png" Width="20" Cursor="Hand"></Image>
+                                        </StackPanel>
+                                        <StackPanel VerticalAlignment="Center">
+                                            <UControl:ButtonEx ButtonType="Icon" IconSize="15" Icon="..\resource\image\close.png" Name="BtnClose" HorizontalAlignment="Right" Click="BtnClose_Click"></UControl:ButtonEx>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+
+                        <!--左边区域-->
+                        <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" Style="{StaticResource SkinMainLeftBorder}" CornerRadius="0,0,0,10" DockPanel.Dock="Left">
+                            <Grid>
+                                <!--菜单区域-->
+                                <DockPanel VerticalAlignment="Top" Width="80" Height="540">
+                                    <Border VerticalAlignment="Top">
+                                        <StackPanel Orientation="Vertical">
+                                            <UControl:ButtonEx Orientation="Vertical" Style="{StaticResource ActiveButtonEx}" Icon="..\resource\image\tradelog@2x.png"  Name="BtnAccount"  Height="85" Width="80" ButtonType="IconText" Content="我的账户"  Click="BtnAccount_Click" FontSize="12"/>
+                                            <UControl:ButtonEx Orientation="Vertical" Style="{StaticResource MenuButtonEx}" Icon="..\resource\image\systemSettings@2x.png" Name="BtnProduct" Click="BtnProduct_Click" Width="80" Height="85"  ButtonType="IconText" Content="成为会员"  FontSize="12"/>
+                                            <UControl:ButtonEx Orientation="Vertical" Style="{StaticResource MenuButtonEx}" Visibility="Visible" Icon="..\resource\image\icon-card.png"  Name="BtnAccountRecord" Click="BtnAccountRecord_Click"  Height="85" Width="80" ButtonType="IconText" Content="资金流水" FontSize="12"/>
+                                            <UControl:ButtonEx Orientation="Vertical" Style="{StaticResource MenuButtonEx}" Icon="..\resource\image\workSettle@2x.png" Name="BtnWithdrawRecord" Width="80" Click="BtnWithdrawRecord_Click"  Height="85" ButtonType="IconText" Content="提现记录"  FontSize="12"/>
+                                            <UControl:ButtonEx Orientation="Vertical" Style="{StaticResource MenuButtonEx}" Icon="..\resource\image\about@2x.png" Name="BtnAbout" Click="BtnAbout_Click" Width="80"   Height="85"  ButtonType="IconText" Content="关于我们" FontSize="12"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+
+                        <!--右边区域-->
+                        <Border MouseLeftButtonDown="Border_MouseLeftButtonDown" Style="{StaticResource SkinMainRightBorder}"  CornerRadius="0,0,10,0" DockPanel.Dock="Right" VerticalAlignment="Top">
+                            <StackPanel Orientation="Vertical">
+                                <Border  BorderThickness="0" Height="480" BorderBrush="#cccccc" Background="White" CornerRadius="8" Margin="10,10,10,0">
+                                    <Frame  Name="FrameTab" NavigationUIVisibility="Hidden" Margin="0" Source="..\Page\Account.xaml"></Frame>
+                                </Border>
+
+                                <Border Style="{StaticResource SkinMainRightBottomBorder}" CornerRadius="0,0,10,0" DockPanel.Dock="Bottom">
+                                    <Border Margin="0,0,20,0" VerticalAlignment="Center">
+                                        <UControl:ButtonEx Name="btnStart" Width="75" Height="25" TextWidth="30" 
+									   CornerRadius="10" ButtonType="IconText" 
+									   Icon="..\resource\image\stop.png" 
+									   Content="启动" Background="#1296db" IconSize="15" IconMargin="4,0" MouseOverBackground="#F2143F" HorizontalAlignment="Right" Click="BtnStart_Click">
+                                        </UControl:ButtonEx>
+                                    </Border>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </DockPanel>
+
+                    <Border Name="StoreBox" Visibility="Collapsed" Background="#FFFDFEFE" BorderBrush="#d24726" HorizontalAlignment="Right" Margin="0,40,40,0" VerticalAlignment="Top" CornerRadius="5" Height="140" Width="190">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#231613" BlurRadius="16" ShadowDepth="0" Opacity="1" />
+                        </Border.Effect>
+                        <StackPanel Orientation="Vertical">
+                            <!--<StackPanel Height="60" Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0">
+                                <Label Content="店铺头像" Foreground="#FF8A8A8A" Margin="0,25,60,0"></Label>
+                                <Image Source="{Binding HeadImg}" Width="32" Height="32" Clip="{StaticResource ResourceKey=ClipGeometry_32}"></Image>
+                            </StackPanel>-->
+                            <StackPanel Orientation="Horizontal" Margin="10,5,0,0" VerticalAlignment="Center" Height="30">
+                                <Label Content="姓      名"  Foreground="#FF8A8A8A" VerticalContentAlignment="Center"></Label>
+                                <Label Foreground="#FF323232" Width="112" Content="{Binding RealName}" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10,0,0,5" Height="30">
+                                <Label Content="用户编号"  Foreground="#FF8A8A8A" VerticalContentAlignment="Center"></Label>
+                                <Label Foreground="#FF323232" Width="112" Content="{Binding UserId}"  VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right"></Label>
+                            </StackPanel>
+                            <Border BorderBrush="#FFF7F7F7" BorderThickness="1" ></Border>
+                           
+                            <StackPanel Orientation="Horizontal" Margin="10,5,0,0" VerticalAlignment="Center" Height="30">
+                                <Label Content="账户类型"  Foreground="#FF8A8A8A" VerticalContentAlignment="Center"></Label>
+                                <Label Foreground="#FF323232" Width="112" Content="{Binding MemberName}" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10,0,0,5" Height="30">
+                                <Label Content="过期时间"  Foreground="#FF8A8A8A" VerticalContentAlignment="Center"></Label>
+                                <Label Foreground="#FF323232" Width="112" Content="{Binding ExpirDateName}" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right"></Label>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

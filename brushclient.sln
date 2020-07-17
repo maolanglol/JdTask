@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.example", "1.example", "{A19CB5C9-7CC7-44ED-AC65-0B5D411963BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Test", "2.Test", "{B2FE5FD9-41B8-438C-BAA2-5C82EE7E9653}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jlion.BrushClient.Application", "src\Jlion.BrushClient.Application\Jlion.BrushClient.Application.csproj", "{04DCEFE5-FF1A-4C12-A5D5-A8FC7F6E682A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jlion.BrushClient.Client", "src\Jlion.BrushClient.Client\Jlion.BrushClient.Client.csproj", "{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jlion.BrushClient.Framework", "src\Jlion.BrushClient.Framework\Jlion.BrushClient.Framework.csproj", "{2EAD2E72-123C-47E0-9E0A-7C2394BAF7A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jlion.BrushClient.UControl", "src\Jlion.BrushClient.UControl\Jlion.BrushClient.UControl.csproj", "{7260EFDF-BB5F-437C-BF81-3D2107E2813F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04DCEFE5-FF1A-4C12-A5D5-A8FC7F6E682A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DCEFE5-FF1A-4C12-A5D5-A8FC7F6E682A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04DCEFE5-FF1A-4C12-A5D5-A8FC7F6E682A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04DCEFE5-FF1A-4C12-A5D5-A8FC7F6E682A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DC337C-A9B4-4172-A8DF-E9BFC89797F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAD2E72-123C-47E0-9E0A-7C2394BAF7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAD2E72-123C-47E0-9E0A-7C2394BAF7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAD2E72-123C-47E0-9E0A-7C2394BAF7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAD2E72-123C-47E0-9E0A-7C2394BAF7A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7260EFDF-BB5F-437C-BF81-3D2107E2813F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7260EFDF-BB5F-437C-BF81-3D2107E2813F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7260EFDF-BB5F-437C-BF81-3D2107E2813F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7260EFDF-BB5F-437C-BF81-3D2107E2813F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6432F5A3-3653-4AE8-87E8-990C89027543}
+	EndGlobalSection
+EndGlobal

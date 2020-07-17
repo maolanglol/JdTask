@@ -1,0 +1,24 @@
+﻿<Window x:Class="Jlion.BrushClient.Client.Transparent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jlion.BrushClient.Client"
+        mc:Ignorable="d"
+        Title="每日付收款精灵" Height="450" Width="800" Topmost="True" WindowState="Normal" MouseDown="Window_MouseDown"  Style="{StaticResource WindowsNoneTransparent}">
+    <Grid>
+		<StackPanel Orientation="Vertical">
+			<Border Background="Black" Height="25" Opacity=".4">
+				<StackPanel Orientation="Horizontal">
+					<Label Name="labContent" Foreground="White">无法识别到金额</Label>
+					<Image Name="imgSuccess" VerticalAlignment="Center" HorizontalAlignment="Right" Source="..\resource\image\success.png"  Width="15"></Image>
+				</StackPanel>
+			</Border>
+			<Border Name="mainBroder"  BorderThickness="2" BorderBrush="Red">
+				<Border Background="Red" Opacity="0.1" Name="mainPanel">
+					
+				</Border>
+			</Border>
+		</StackPanel>
+	</Grid>
+</Window>
