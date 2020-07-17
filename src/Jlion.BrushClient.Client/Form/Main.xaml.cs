@@ -233,7 +233,7 @@ namespace Jlion.BrushClient.Client
                 notifyIcon = new System.Windows.Forms.NotifyIcon
                 {
                     Icon = new Icon(path),//图标图片
-                    Text = "走地鸡",
+                    Text = "刷任务助手",
                     Visible = true,
                 };
                 notifyIcon.MouseDoubleClick += OnNotifyIconDoubleClick;

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Jlion.BrushClient.Client"
         mc:Ignorable="d"
-        Title="走地鸡" Height="502" Width="400" BorderThickness="15" Topmost="True" PreviewKeyDown="Window_PreviewKeyDown" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown" Style="{StaticResource WindowsNoneTransparent}">
+        Title="刷任务助手" Height="502" Width="400" BorderThickness="15" Topmost="True" PreviewKeyDown="Window_PreviewKeyDown" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown" Style="{StaticResource WindowsNoneTransparent}">
 	<Window.Effect>
 		<DropShadowEffect BlurRadius="15" Color="#858484" Direction="45" ShadowDepth="3"/>
 	</Window.Effect>
@@ -27,7 +27,7 @@
 						<StackPanel>
                             <StackPanel Orientation="Horizontal"  Width="180">
                                 <Image Source="..\resource\image\main-logo.png" Width="80" Height="80" Margin="0,60,0,0"></Image>
-                                <Label Content="走地鸡" FontSize="30"  Foreground="#d18354" Margin="0,80,0,0"></Label>
+                                <Label Content="刷任务助手" FontSize="30"  Foreground="#d18354" Margin="0,80,0,0"></Label>
 							</StackPanel>
 							<StackPanel Orientation="Horizontal">
 								<Border BorderBrush="#CFCFCF" BorderThickness="0,0,0,1" Margin="30,30,0,0" Height="50">

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Jlion.BrushClient.Client"
         xmlns:ucontrol="clr-namespace:Jlion.BrushClient.UControl;assembly=Jlion.BrushClient.UControl"
         mc:Ignorable="d"
-        Title="走地鸡" Height="800" Topmost="True" Width="800" Opacity="1" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen" Style="{StaticResource SkinWindowsNone}">
+        Title="刷任务助手" Height="800" Topmost="True" Width="800" Opacity="1" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterScreen" Style="{StaticResource SkinWindowsNone}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

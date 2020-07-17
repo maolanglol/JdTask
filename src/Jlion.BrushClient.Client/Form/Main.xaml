@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:UControl="clr-namespace:Jlion.BrushClient.UControl;assembly=Jlion.BrushClient.UControl"
         mc:Ignorable="d"
-        Title="走地鸡" BorderThickness="15" WindowStartupLocation="CenterScreen" Topmost="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Style="{StaticResource SkinWindowsNoneTransparent}">
+        Title="刷任务助手" BorderThickness="15" WindowStartupLocation="CenterScreen" Topmost="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" Style="{StaticResource SkinWindowsNoneTransparent}">
     <!--<Window.Resources>
         <ResourceDictionary>
             <RoutedUICommand x:Key="PrintCommand" Text="NumPad1"/>
@@ -33,7 +33,7 @@
                             <Grid>
                                 <DockPanel HorizontalAlignment="Left" Width="200">
                                     <Image Source="..\resource\image\main-logo.png" Name="OemLogo" Width="40" HorizontalAlignment="Left" Margin="10,0,0,0"></Image>
-                                    <Label Content="走地鸡" Name="OemName" Foreground="White"  VerticalContentAlignment="Center" FontSize="12"></Label>
+                                    <Label Content="刷任务助手" Name="OemName" Foreground="White"  VerticalContentAlignment="Center" FontSize="12"></Label>
                                 </DockPanel>
                                 <DockPanel HorizontalAlignment="Right" Width="120">
                                     <StackPanel Orientation="Horizontal">
@@ -42,7 +42,7 @@
                                         </UControl:ButtonEx>-->
                                         <StackPanel Orientation="Horizontal" Width="80" MouseLeftButtonDown="Image_MouseLeftButtonDown">
                                             <!--<Image Source="..\resource\image\exe.ico" Name="ImgCashAvator" Width="20" Height="20"  Clip="{StaticResource ResourceKey=ClipGeometry}"></Image>-->
-                                            <Label Foreground="#E5E5E5" VerticalContentAlignment="Center" Name="labStoreName" Width="50">走地鸡</Label>
+                                            <Label Foreground="#E5E5E5" VerticalContentAlignment="Center" Name="labStoreName" Width="50">刷任务助手</Label>
                                             <Image Source="..\resource\image\icon-tree.png" Width="20" Cursor="Hand"></Image>
                                         </StackPanel>
                                         <StackPanel VerticalAlignment="Center">

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Jlion.BrushClient.Client"
 		xmlns:r="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="走地鸡" Height="110" Width="245" Topmost="True"  MouseDown="Window_MouseDown" WindowStartupLocation="Manual" LocationChanged="Window_LocationChanged"  Style="{StaticResource WindowsNoneTransparent}">
+        Title="刷任务助手" Height="110" Width="245" Topmost="True"  MouseDown="Window_MouseDown" WindowStartupLocation="Manual" LocationChanged="Window_LocationChanged"  Style="{StaticResource WindowsNoneTransparent}">
 	<!--<Grid>-->
     <Window.Effect>
         <DropShadowEffect BlurRadius="15" Color="#858484" Direction="45" ShadowDepth="3"/>
